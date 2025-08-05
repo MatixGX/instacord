@@ -37,7 +37,6 @@
     "welcome_pre": "Nowy członek",
     "welcome_suff": "!",
     "welcome_embed": {
-      "color": "0xffffff",
       "title": "Witaj na serwerze",
       "description": "Mamy nadzieję żę będziesz się tu dobrze bawił!",
       "fields": [
@@ -48,7 +47,6 @@
       ]
     },
     "leave_embed": {
-      "color": "0xff0000",
       "title": "Żegnaj",
       "description": "Mamy nadzieję żę jeszcze wrócisz!",
       "leave_pre": "Żegnaj",

@@ -12,6 +12,7 @@
 * The bot picks random posts every 5 minutes (configurable)
 * The bot automatically send top 3 users to a "TOP USERS" channel
 * Uses mongoDB as the database
+* Configurable channel IDs, durations, messages 
 
 ## Requirements
 * Node.js

@@ -6,7 +6,7 @@ const token = process.env.TOKEN;
 const testID = config.main_guild_id;
 const fs = require("node:fs");
 
-export async function UploadCommands() {
+async function UploadCommands() {
 const commands = [];
 // Grab all the command files from the commands directory you created earlier
 const commandFiles = fs
@@ -41,3 +41,5 @@ const rest = new REST({ version: "10" }).setToken(token);
   }
 })();
 }
+
+module.exports ={UploadCommands}

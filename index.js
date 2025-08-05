@@ -7,7 +7,6 @@ const db = require("./database/database");
 const UserModel = require("./models/user");
 const config = require("./config.json")
 require("dotenv").config();
-const fs = require("node:fs");
 const {UploadCommands} = require("./commandUploader")
 
 db.then(() => {
@@ -99,7 +98,7 @@ client.on("guildMemberAdd", async (member) => {
     config.welcome_config.welcome_channel_id
   );
   const welcomeEmbed = new Discord.EmbedBuilder()
-    .setColor(config.welcome_config.welcome_embed.color)
+    .setColor(0xffffff)
     .setImage(
       `https://cdn.discordapp.com/avatars/${member.user.id}/${member.user.avatar}`
     )
@@ -120,7 +119,7 @@ client.on("guildMemberRemove", async (member) => {
     config.welcome_config.welcome_channel_id
   );
   const welcomeEmbed = new Discord.EmbedBuilder()
-    .setColor(config.welcome_config.leave_embed.color)
+    .setColor(0xff0000)
     .setImage(
       `https://cdn.discordapp.com/avatars/${member.user.id}/${member.user.avatar}`
     )
@@ -198,6 +197,7 @@ async function GetTop() {
     });
   });
 
+  if (all.length >= 3) {
   const sorted = all.sort((a, b) => a.followers - b.followers);
   var podium = [
     sorted[sorted.length - 1],
@@ -215,6 +215,7 @@ async function GetTop() {
   });
 
   TopChannel.send(sendString);
+}
 }
 
 client.login(process.env.TOKEN);
