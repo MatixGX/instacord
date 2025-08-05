@@ -1,0 +1,114 @@
+{
+  "main_guild_id": "1167118268553756702",
+  "logged_out_role_id": "1167119291108307055",
+  "user_role_id": "1167118569260187648",
+  "accounts_cathegory_id":"1167130144671006820",
+  "new_posts_channel_id": "1167120833618124801",
+  "random_posts_channel":"1167120764466630686",
+  "top_users_channel_id":"1167120537827414097",
+  "follow_logs_channel":"1167120370898321488",
+  "register_channel":"1167119738812502118",
+  "delays_ms":{
+    "random_account":600000,
+    "top_users": 1800000
+  },
+  "counter_config": {
+    "all_people_channel_id":"1167121302620995644",
+    "all_people_name_prefix": "・💛・Osoby: ",
+    "people_counter_interval_ms":300000
+  },
+  
+  "messages_config": {
+    "posted_a_new_post": "wrzucił nowy post:",
+    "random_post_prefix": "Losowy post na te 10 minut:",
+    "random_post_suffix": ". \n Następny za 10 minut!",
+    "top_users_title": "# Podium: \n",
+    "followers": "Obserwujący:",
+    "following":"Obserwowani:",
+    "just_followed":"właśnie zaobserwował",
+    "success_creating_account":"Pomyślnie utworzono konto!",
+    "use_register_to_register":"**Użyj /register by się zarejestrować**",
+    "unfollowed":"przestał obserwować"
+  },
+  "welcome_config": {
+    "welcome_channel_id": "1167122175958982767",
+    "welcome_pre": "Nowy członek",
+    "welcome_suff": "!",
+    "welcome_embed": {
+      "color": "0xffffff",
+      "title": "Witaj na serwerze",
+      "description": "Mamy nadzieję żę będziesz się tu dobrze bawił!",
+      "fields": [
+        {
+          "name": "Koniecznie obczaj:",
+          "value": "<#1167119738812502118>, <#1167122020480319639>, <#1167120622384594944>"
+        }
+      ]
+    },
+    "leave_embed": {
+      "color": "0xff0000",
+      "title": "Żegnaj",
+      "description": "Mamy nadzieję żę jeszcze wrócisz!",
+      "leave_pre": "Żegnaj",
+      "leave_suff": "!"
+    }
+  },
+  "commands_config":{
+    "follow":{
+      "command_name":"follow",
+      "description":"Zaobserwuj użytkownika.",
+      "person_option_name":"osoba",
+      "person_option_description":"Osoba, którą chcesz zaobserwować.",
+      "messages":{
+        "errors":{
+          "already_following":"Już obserwujesz tą osobę!",
+          "no_account_person":"Osoba którą chcesz zaobserwować nie ma konta."
+        },
+        "success":"Pomyślnie zaobserwowano"
+      }
+    },
+    "followers":{
+      "command_name":"obserwowani",
+      "description":"Pokazuje, kogo obserwujesz."
+    },
+    "help": {
+      "command_name":"pomoc",
+      "description":"Pokazuje pomoc dotyczącą komend.",
+      "help_msg": "# Pomoc dotycząca komend:\n \n**/register <nazwa>** - tworzy konto na Instacordzie.\n**/profil (opcjonalnie: <osoba>)** - pokazuje profil jakiegoś użytkownika (jeśli podany), lub twój.\n**/follow <osoba>** - obserwuje daną osobę.\n**/unfollow <osoba>** - przestań obserwować daną osobę.\n**/obserwowani** - pokaż, kogo obserwujesz.\n**/pomoc** - pokaż tą listę."
+    },
+    "profile":{
+      "command_name":"profil",
+      "description":"Wysyła ci twój profil lub profil kogoś innego.",
+      "person_option_description":"Osoba, której profil chcesz wyświetlić (jeśli brak wyświetla twój).",
+      "person_option_name":"osoba",
+      "fields":{
+        "followers":"Obserwujący: ",
+        "following":"Obserwowani: ",
+        "profile":"Profil: "
+      },
+      "errors":{"no_account_person":"Ta osoba nie ma konta!"}
+    },
+    "register":{
+      "command_name":"register",
+      "description":"Tworzy konto na instacordzie (jest powiazane z kontem Discord).",
+      "name_option_name": "nazwa",
+      "name_option_description": "Nazwa użytkownika używana jako nazwa konta Instacord."
+    },
+    "unfollow":{
+      "command_name":"unfollow",
+      "description":"Przestań obserwować użytkownika.",
+      "person_option_name":"osoba",
+      "person_option_description":"Osoba, która chcesz przestać obserwować.",
+      "errors":{"not_following":"Nie obserwujesz tej osoby!","no_account_person":"Osoba, która chcesz przestać obserwować, nie ma konta."},
+      "msg":{
+        "unfollowed":"Przestano obserwować"
+      }
+    }
+  },
+  "common_errors": {
+    "no_account_you":"Nie masz konta!",
+    "alreade_have_an_account":"Już masz konto!",
+    "cant_use_this_here":"Nie możesz tutaj tego użyć!"
+  }
+
+}
