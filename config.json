@@ -8,6 +8,8 @@
   "top_users_channel_id":"1167120537827414097",
   "follow_logs_channel":"1167120370898321488",
   "register_channel":"1167119738812502118",
+  "bot_status":"Pilnuje serwera",
+  "bot_status_type":"dnd",
   "delays_ms":{
     "random_account":600000,
     "top_users": 1800000

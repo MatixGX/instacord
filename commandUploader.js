@@ -1,10 +1,12 @@
 const { REST, Routes } = require("discord.js");
 require("dotenv").config();
+const config = require("./config.json")
 const clientID = process.env.CLIENTID;
 const token = process.env.TOKEN;
-const testID = process.env.GUILDID;
+const testID = config.main_guild_id;
 const fs = require("node:fs");
 
+export async function UploadCommands() {
 const commands = [];
 // Grab all the command files from the commands directory you created earlier
 const commandFiles = fs
@@ -38,3 +40,4 @@ const rest = new REST({ version: "10" }).setToken(token);
     console.error(error);
   }
 })();
+}

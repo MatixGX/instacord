@@ -1,11 +1,14 @@
 const Discord = require("discord.js");
-const { GatewayIntentBits, Collection } = require("discord.js");
+const { GatewayIntentBits, Collection, REST, Routes } = require("discord.js");
 require("dotenv").config();
 const path = require("path");
 const fs = require("fs");
 const db = require("./database/database");
 const UserModel = require("./models/user");
 const config = require("./config.json")
+require("dotenv").config();
+const fs = require("node:fs");
+const {UploadCommands} = require("./commandUploader")
 
 db.then(() => {
   console.log("Connencted to MongoDB.");
@@ -38,15 +41,16 @@ for (const file of commandFiles) {
 }
 
 client.on("ready", () => {
+  UploadCommands()
   console.log(`Gotowy, zalogowano jako ${client.user.username}`);
 
   client.user.setPresence({
     activities: [
       {
-        name: "Pilnuje serwera",
+        name: config.bot_status,
       },
     ],
-    status: "dnd",
+    status: config.bot_status_type,
   });
   UpdateCounters();
   const updateCounters = setInterval(UpdateCounters, config.counter_config.people_counter_interval_ms);
